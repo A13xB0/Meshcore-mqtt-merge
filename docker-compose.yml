@@ -1,0 +1,7 @@
+services:
+  merge:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./config.json:/config.json:ro
+    env_file: .env

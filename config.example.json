@@ -1,0 +1,9 @@
+{
+  "inputs": [
+    { "name": "local", "url": "tcp://mosquitto.lan:1883" },
+    { "name": "letsmesh", "url": "wss://mqtt.example.org:443/mqtt", "username": "user", "password": "${LETSMESH_PASSWORD}", "topics": ["meshcore/EDI/#", "meshcore/GLA/#"] }
+  ],
+  "output": { "url": "tcp://localhost:1883", "username": "merge", "password": "${OUTPUT_PASSWORD}", "qos": 0 },
+  "dedupSeconds": 60,
+  "statsSeconds": 300
+}
